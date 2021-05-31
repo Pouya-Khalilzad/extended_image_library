@@ -2,6 +2,7 @@ import 'dart:typed_data';
 import 'dart:ui' as ui show Codec;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
+import 'dart:io' as IO;
 
 /// mock web File
 /// no implement
@@ -37,7 +38,7 @@ class FileImage extends ImageProvider<FileImage> {
   const FileImage(this.file, {this.scale = 1.0});
 
   /// The file to decode into an image.
-  final File file;
+  final IO.File file;
 
   /// The scale to place in the [ImageInfo] object of the image.
   final double scale;
