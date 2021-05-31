@@ -4,11 +4,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart' hide FileImage;
 import 'extended_image_provider.dart';
 import 'platform.dart';
+import 'dart:io' as IO;
 
 class ExtendedFileImageProvider extends FileImage
     with ExtendedImageProvider<FileImage> {
   const ExtendedFileImageProvider(
-    File file, {
+    IO.File file, {
     double scale = 1.0,
     this.cacheRawData = false,
     this.imageCacheName,
